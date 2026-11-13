@@ -1,0 +1,232 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef3f9;
+    color: #243247;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2563eb;
+    font-size: 28px;
+}
+
+header p {
+    color: #64748b;
+    margin-top: 7px;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+#searchForm {
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#searchInput:focus {
+    border-color: #2563eb;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 22px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#hasilPencarian {
+    background: white;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.hasil-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 13px;
+    background: white;
+    color: #243247;
+    border-radius: 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hasil-item:hover {
+    background: #eff6ff;
+}
+
+#status {
+    margin: 15px 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+main {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #0000000d;
+}
+
+main[hidden] {
+    display: none;
+}
+
+.lokasi {
+    margin-bottom: 20px;
+}
+
+.lokasi p {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.cuaca-utama {
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cuaca-utama h1 {
+    font-size: 48px;
+}
+
+.cuaca-utama h2 {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.cuaca-utama p {
+    font-size: 13px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.icon {
+    font-size: 60px;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.detail-card {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.detail-card span {
+    font-size: 22px;
+}
+
+.detail-card p {
+    color: #64748b;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.detail-card h3 {
+    font-size: 17px;
+}
+
+.prakiraan h2 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.cuaca-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5px;
+    border-bottom: 1px solid #e2e8f0;
+    gap: 10px;
+}
+
+.cuaca-item .waktu {
+    color: #64748b;
+    font-size: 13px;
+    min-width: 55px;
+}
+
+.cuaca-item .kondisi {
+    flex: 1;
+    font-size: 13px;
+}
+
+.cuaca-item .suhu {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+    body {
+        padding: 12px;
+    }
+
+    main {
+        padding: 17px;
+    }
+
+    .detail {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cuaca-utama h1 {
+        font-size: 38px;
+    }
+
+    .icon {
+        font-size: 45px;
+    }
+}

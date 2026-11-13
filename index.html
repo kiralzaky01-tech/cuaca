@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuacaKu - Informasi Cuaca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🌤️ Cuacabatu</h1>
+            <p>Informasi cuaca di seluruh dunia</p>
+        </header>
+
+        <section class="search-box">
+            <form id="searchForm">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari kota, contoh: Medan"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">Cari</button>
+            </form>
+
+            <div id="hasilPencarian"></div>
+        </section>
+
+        <p id="status"></p>
+
+        <main id="weatherContainer" hidden>
+
+            <section class="lokasi">
+                <h3 id="namaLokasi">-</h3>
+                <p id="tanggal">-</p>
+            </section>
+
+            <section class="cuaca-utama">
+                <div>
+                    <h1 id="suhu">--°C</h1>
+                    <h2 id="kondisi">-</h2>
+                    <p id="terasa">-</p>
+                </div>
+
+                <div id="icon" class="icon">🌤️</div>
+            </section>
+
+            <section class="detail">
+
+                <div class="detail-card">
+                    <span>💧</span>
+                    <p>Kelembapan</p>
+                    <h3 id="kelembapan">--%</h3>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌬️</span>
+                    <p>Kecepatan Angin</p>
+                    <h3 id="angin">-- km/j</h3>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌧️</span>
+                    <p>Peluang Hujan</p>
+                    <h3 id="hujan">--%</h3>
+                </div>
+
+            </section>
+
+            <section class="prakiraan">
+                <h2>Prakiraan Per Jam</h2>
+                <div id="daftarCuaca"></div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Data cuaca dari Open-Meteo</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
